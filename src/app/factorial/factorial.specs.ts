@@ -36,3 +36,4 @@ describe('factorial', () => {
         expect(result).toBe(0);
     });
 });
+
