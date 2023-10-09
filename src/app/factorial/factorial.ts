@@ -8,4 +8,7 @@ export function factorial(x: number): number {
     } else {
         return x * factorial(x - 1);
     }
+
+
+
 }
