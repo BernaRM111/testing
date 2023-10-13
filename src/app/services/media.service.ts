@@ -11,6 +11,7 @@ export class MediaService {
 
   constructor(private http: HttpClient) {}
 
+  
   getDevHours(): Observable<number[]> {
     return this.http.get<{data: number[]}>(`${this.baseURL}/hours`).pipe(
       map(response => response.data)
@@ -22,5 +23,5 @@ export class MediaService {
       map(response => response.data)
     );
   }
-  
+
 }
