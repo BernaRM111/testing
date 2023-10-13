@@ -37,6 +37,8 @@ import { Observable } from 'rxjs';
   template: ''
 })
 
+
+
 export class StddevComponent implements OnInit {
   devHoursStddev: number = 0;
   proxySizeStddev: number = 0;

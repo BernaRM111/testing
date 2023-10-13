@@ -7,24 +7,22 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class MediaService {
-  private readonly devHoursUrl = 'https://api-testing-service-bernarm111.cloud.okteto.net/hours';
-  private readonly proxySizeUrl = 'https://api-testing-service-bernarm111.cloud.okteto.net/size';
+
+  private baseURL: string = 'https://api-testing-service-bernarm111.cloud.okteto.net';
 
   constructor(private http: HttpClient) {}
 
+  
   getDevHours(): Observable<number[]> {
-    return this.http.get<{data: number[]}>(this.devHoursUrl).pipe(
+    return this.http.get<{data: number[]}>(`${this.baseURL}/hours`).pipe(
       map(response => response.data)
     );
   }
 
   getProxySize(): Observable<number[]> {
-    return this.http.get<{data: number[]}>(this.proxySizeUrl).pipe(
+    return this.http.get<{data: number[]}>(`${this.baseURL}/size`).pipe(
       map(response => response.data)
     );
   }
 
-  calculateAverage(data: number[]): number {
-    return data.reduce((acc, val) => acc + val, 0) / data.length;
-  }
 }
