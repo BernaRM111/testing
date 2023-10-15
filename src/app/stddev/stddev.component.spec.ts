@@ -34,4 +34,5 @@ describe('StddevComponent', () => {
 
     expect(component.proxySizeStdDev).toEqual(expectedStdDevForProxySize);
   });
+  
 });
