@@ -6,13 +6,11 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class MediaService {
-
+export class StddevService {
   private baseURL: string = 'https://api-testing-service-bernarm111.cloud.okteto.net';
 
   constructor(private http: HttpClient) {}
 
-  
   getDevHours(): Observable<number[]> {
     return this.http.get<{data: number[]}>(`${this.baseURL}/hours`).pipe(
       map(response => response.data)
@@ -24,5 +22,7 @@ export class MediaService {
       map(response => response.data)
     );
   }
-
 }
+
+
+
