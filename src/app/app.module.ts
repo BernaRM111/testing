@@ -8,6 +8,10 @@ import { MediaComponent } from './media/media.component';
 import { StddevComponent } from './stddev/stddev.component';
 
 
+import { StddevComponent } from './stddev/stddev.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
