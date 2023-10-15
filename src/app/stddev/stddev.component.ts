@@ -19,12 +19,12 @@ export class StddevComponent implements OnInit {
     this.calculateDevHoursStandardDeviation();
   }
 
+
   calculateProxySizeStandardDeviation() {
     this.stddevService.getProxySize().subscribe(data => { 
       const mean = media(data);
       this.proxySizeStdDev = this.desviacionEstandar(data, mean);
-    });
-  }
+
 
   calculateDevHoursStandardDeviation() {
     this.stddevService.getDevHours().subscribe(data => { 
