@@ -8,10 +8,7 @@ import { RegresionService } from '../services/regresion.service';
   styleUrls: ['./regression.component.css']
 })
 export class RegressionComponent implements OnInit {
-  constructor(
-    private serviceTest1: RegresionService,
-
-  ) { }
+  constructor(private serviceTest1: RegresionService,) { }
 
   x_test1: number[] = []
   y_test1: number[] = []

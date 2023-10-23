@@ -1,20 +1,23 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RegressionComponent } from './regression.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RegresionService } from '../services/regresion.service';//
 
 describe('RegressionComponent', () => {
   let component: RegressionComponent;
   let fixture: ComponentFixture<RegressionComponent>;
+  let regressionService: RegresionService;//
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async() => {//
+    await TestBed.configureTestingModule({//
       declarations: [RegressionComponent],
       imports: [HttpClientModule],
-    });
+    }).compileComponents();//
     fixture = TestBed.createComponent(RegressionComponent);
     component = fixture.componentInstance;
+    regressionService = TestBed.inject(RegresionService);//
     fixture.detectChanges();
-    component.ngOnInit()
+    //component.ngOnInit()
   });
 
   it('Should return r=0.9545 with the dataset Data_Test1', waitForAsync(() => {

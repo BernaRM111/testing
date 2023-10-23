@@ -1,16 +1,17 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { LinearRegressionComponent } from './linear-regression.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { RegresionService } from '../services/regresion.service';
+import { RegresionService } from '../services/regresion.service';//
 import { MediaComponent } from '../media/media.component';
 import { sumaX, sumaX2, sumaXY, sumaY, media} from "../common/calculate";
 
 describe('LinearRegressionComponent', () => {
   let component: LinearRegressionComponent;
   let fixture: ComponentFixture<LinearRegressionComponent>;
+  let regressionService: RegresionService;//
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async() => {//
+    await TestBed.configureTestingModule({//
       declarations: [LinearRegressionComponent],
       imports: [HttpClientModule],
       providers: [MediaComponent],
@@ -18,7 +19,8 @@ describe('LinearRegressionComponent', () => {
     fixture = TestBed.createComponent(LinearRegressionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-    component.ngOnInit()
+    regressionService = TestBed.inject(RegresionService);//
+    //component.ngOnInit()//
   });
 
 
