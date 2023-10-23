@@ -10,6 +10,7 @@ import { StddevComponent } from './stddev/stddev.component';
 
 
 import { StddevComponent } from './stddev/stddev.component';
+import { LinearRegressionComponent } from './linear-regression/linear-regression.component';
 
 
 
@@ -18,7 +19,8 @@ import { StddevComponent } from './stddev/stddev.component';
     AppComponent,
 
     MediaComponent,
-    StddevComponent
+    StddevComponent,
+    LinearRegressionComponent
 
   ],
   imports: [
