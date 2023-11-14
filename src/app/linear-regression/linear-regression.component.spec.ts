@@ -3,7 +3,7 @@ import { LinearRegressionComponent } from './linear-regression.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RegresionService } from '../services/regresion.service';//
 import { MediaComponent } from '../media/media.component';
-import { sumaX, sumaX2, sumaXY, sumaY, media} from "../common/calculate";
+import { suma, sumaX2, sumaXY, media} from "../common/calculate";
 
 describe('LinearRegressionComponent', () => {
   let component: LinearRegressionComponent;

@@ -1,9 +1,13 @@
-export function sumaX(valoresX: number[]): number {
+/*export function sumaX(valoresX: number[]): number {
   return valoresX.reduce((acc, x) => acc + x, 0);
 }
 
 export function sumaY(valoresY: number[]): number {
   return valoresY.reduce((acc, y) => acc + y, 0);
+}*/
+
+export function suma(valores: number[]): number {
+  return valores.reduce((acc, n) => acc + n, 0);
 }
 
 export function sumaXY(valoresX: number[], valoresY: number[]): number {
@@ -21,7 +25,7 @@ export function sumaY2(dataY: number[]): number {
 export function media(datos: number[]) {
   console.log(datos)
   if (datos.length === 0) {
-    throw new Error("Error");
+    //throw new Error("Error");
   }
 
   const suma = datos.reduce((total, valor) => total + valor, 0);

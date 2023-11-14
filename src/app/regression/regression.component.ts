@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { sumaX, sumaXY, sumaX2, sumaY2 } from "../common/calculate";
+import { suma, sumaXY, sumaX2, sumaY2 } from "../common/calculate";
 import { RegresionService } from '../services/regresion.service';
 
 @Component({
@@ -49,8 +49,8 @@ export class RegressionComponent implements OnInit {
   correlationCoefficient(x: number[], y: number[]): number {
 
     const n = x.length;
-    const sumaValoresX = sumaX(x);
-    const sumaValoresY = sumaX(y);
+    const sumaValoresX = suma(x);
+    const sumaValoresY = suma(y);
     const sumaValoresXY = sumaXY(x, y);
     const sumaValoresX2 = sumaX2(x);
     const sumaValoresY2 = sumaY2(y);

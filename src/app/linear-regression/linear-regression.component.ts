@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RegresionService } from '../services/regresion.service';
-import { sumaX, sumaX2, sumaXY, sumaY, media} from "../common/calculate";
+import { suma, sumaX2, sumaXY, media} from "../common/calculate";
 
 @Component({
   selector: 'app-linear-regression',

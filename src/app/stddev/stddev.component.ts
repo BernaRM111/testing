@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StddevService } from '../services/stddev.service';
+import { MediaService } from '../services/media.service';
 import { Observable } from 'rxjs';
 import { media } from '../media/media.component';
 
@@ -12,7 +12,7 @@ export class StddevComponent implements OnInit {
   proxySizeStdDev: number = 0;
   devHoursStdDev: number = 0;
 
-  constructor(private stddevService: StddevService) {}
+  constructor(private mediaService: MediaService) {}
 
   ngOnInit() {
     this.calculateProxySizeStandardDeviation();
@@ -20,14 +20,14 @@ export class StddevComponent implements OnInit {
   }
 
   calculateProxySizeStandardDeviation() {
-    this.stddevService.getProxySize().subscribe(data => { 
+    this.mediaService.getProxySize().subscribe(data => { 
       const mean = media(data);
       this.proxySizeStdDev = this.desviacionEstandar(data, mean);
     });
   }
 
   calculateDevHoursStandardDeviation() {
-    this.stddevService.getDevHours().subscribe(data => { 
+    this.mediaService.getDevHours().subscribe(data => { 
       const mean = media(data);
       this.devHoursStdDev = this.desviacionEstandar(data, mean);
     });

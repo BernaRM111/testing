@@ -1,23 +1,23 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { StddevComponent } from './stddev.component';
-import { StddevService } from '../services/stddev.service';
+import { MediaService } from '../services/media.service';
 import { HttpClientModule } from '@angular/common/http';
 
 describe('StddevComponent', () => {
   let component: StddevComponent;
   let fixture: ComponentFixture<StddevComponent>;
-  let stddevService: StddevService;
+  let mediaService: MediaService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [StddevComponent],
-      providers: [StddevService],
+      providers: [MediaService],
       imports: [HttpClientModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(StddevComponent);
     component = fixture.componentInstance;
-    stddevService = TestBed.inject(StddevService);
+    mediaService = TestBed.inject(MediaService);
     fixture.detectChanges();
   });
 
