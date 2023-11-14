@@ -24,9 +24,9 @@ export function sumaY2(dataY: number[]): number {
 
 export function media(datos: number[]) {
   console.log(datos)
-  if (datos.length === 0) {
+  //if (datos.length === 0) {
     //throw new Error("Error");
-  }
+  //}
 
   const suma = datos.reduce((total, valor) => total + valor, 0);
   const media = suma / datos.length;
