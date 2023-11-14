@@ -12,6 +12,7 @@ import { StddevComponent } from './stddev/stddev.component';
 import { StddevComponent } from './stddev/stddev.component';
 import { LinearRegressionComponent } from './linear-regression/linear-regression.component';
 import { RegressionComponent } from './regression/regression.component';
+import { SimpsonComponent } from './simpson/simpson.component';
 
 
 
@@ -22,7 +23,8 @@ import { RegressionComponent } from './regression/regression.component';
     MediaComponent,
     StddevComponent,
     LinearRegressionComponent,
-    RegressionComponent
+    RegressionComponent,
+    SimpsonComponent
 
   ],
   imports: [
