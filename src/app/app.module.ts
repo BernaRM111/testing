@@ -10,6 +10,7 @@ import { SimpsonComponent } from './simpson/simpson.component';
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
 import { UnoAComponent } from './uno-a/uno-a.component';
+import { TresAComponent } from './tres-a/tres-a.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { UnoAComponent } from './uno-a/uno-a.component';
     SimpsonComponent,
     MenuComponent,
     UnoAComponent,
+    TresAComponent,
   ],
   imports: [
     BrowserModule,

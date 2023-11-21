@@ -1,0 +1,166 @@
+.col {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.resultado {
+    padding: 1%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.labels {
+    padding-top: 2%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: 0%;
+}
+
+.x-3a{
+    width: 20rem;
+    height: 3rem;
+    text-align: center;
+    /* margin-left: 5%;
+    margin-right: 5%; */
+}
+
+.y-3a{
+    width: 20rem;
+    height: 3rem;
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    /* margin-left: 5%;
+    margin-right: 5%; */
+}
+
+.valor-3a{
+    width: 20rem;
+    height: 3rem;
+    text-align: center;
+    /* margin-left: 5%;
+    margin-right: 5%; */
+}
+
+.resultadob0 {
+    padding: 1%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.resultadob1 {
+    padding: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.resultadoregresion {
+    padding: 1%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.resultadocorrelacion {
+    padding: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.resultadorr {
+    padding: 1%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.datos {
+    padding: 1%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.datox-3a{
+    width: 20rem;
+    height: 3rem;
+    text-align: center;
+    /* margin: 2%; */
+}
+.datoy-3a{
+    width: 20rem;
+    height: 3rem;
+    text-align: center;
+    /* margin: 2%; */
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.datovalor-3a{
+    width: 20rem;
+    height: 3rem;
+    text-align: center;
+    /* margin: 2%; */
+}
+
+.card-row{
+    width: 20rem; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    
+}
+
+/* .list-group{
+    width: 20rem;
+    height: auto;
+} */
+
+h1 {
+    text-align: center;
+    padding-top: 10px;
+}
+
+h3 {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.btn {
+    /* padding: 1%; */
+    display: flex;
+    width: 80%;
+    height: 50%;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    margin-bottom: 20px; 
+    cursor: pointer;
+    font-size: 16px; 
+    /* font-weight: 80px; */ 
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+
+}
+
+.btn-regresion {
+    background-color: #5ce1e6;
+    color:black;
+}
+
+.btn-correlacion {
+    background-color: #5ce1e6;
+    color:black;
+
+}
+
+.list-group {
+    list-style-type: none;
+    /* padding-left: 0; */
+}
