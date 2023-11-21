@@ -8,6 +8,7 @@ import { LinearRegressionComponent } from './linear-regression/linear-regression
 import { RegressionComponent } from './regression/regression.component';
 import { SimpsonComponent } from './simpson/simpson.component';
 import { FormsModule } from '@angular/forms';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormsModule } from '@angular/forms';
     LinearRegressionComponent,
     RegressionComponent,
     SimpsonComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
