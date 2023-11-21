@@ -1,0 +1,39 @@
+<div class="titulo">
+    <h1>3a. Regresión lineal - Correlación</h1>
+</div>
+<h3>Ingresa los numeros separados por comas:</h3>
+<div class="labels">
+    <label id="x-3a" class="x-3a">Ingresa X:</label>
+    <label id="y-3a" class="y-3a">Ingresa Y:</label>
+    <label id="valor-3a" class="valor-3a">Ingresa Valor:</label>
+</div>
+<div class="datos">
+    <input id="datox-3a" [(ngModel)]="dataX" type="text" class="datox-3a" name="datox-3a" placeholder="1,3.6,7,4.2...">
+    <input id="datoy-3a" [(ngModel)]="dataY" type="text" class="datoy-3a" name="datoy-3a" placeholder="1,3.6,7,4.2...">
+    <input id="datovalor-3a" [(ngModel)]="dataNum" type="number" class="datovalor-3a" name="datovalor-3a" placeholder="6">
+</div>
+<div class="col">
+    <div class="card-row">
+        <div class="card-body">
+            <ul class="list-group list-group-flush">
+                <li>
+                    <button type="button" class="btn btn-regresion regresion-button" (click)="regresion()">
+                        <p>Calcular Regresión</p>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-correlacion correlacion-button" (click)="correlacion()">
+                        <p>Calcular Correlación</p>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="resultado">
+    <input id="resultadob0" type="number" class="resultadob0" name="resultadob0" placeholder="Resultado b0" readonly value={{b0}}>
+    <input id="resultadob1" type="number" class="resultadob1" name="resultadob1" placeholder="Resultado b1" readonly value={{b1}}>
+    <input id="resultadoregresion" type="number" class="resultadoregresion" name="resultadoregresion" placeholder="Resultado regresión" readonly value={{regre}}>
+    <input id="resultadocorrelacion" type="number" class="resultadocorrelacion" name="resultadocorrelacion" placeholder="Resultado correlación" readonly value={{correla}}>
+    <input id="resultadorr" type="number" class="resultadorr" name="resultadorr" placeholder="Resultado rr" readonly value={{rr}}>
+</div>
