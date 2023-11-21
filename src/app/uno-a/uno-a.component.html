@@ -1,0 +1,28 @@
+<div class="titulo">
+    <h1>1a. Media - Desviación estandar</h1>
+</div>
+<h3>Ingresa los numeros separados por comas:</h3>
+<div class="datos">
+    <input id="datos1a" [(ngModel)]="data" type="text" class="datos1a" name="datos1a" placeholder="1,3.6,7,4.2...">
+</div>
+<div class="col">
+    <div class="card-row">
+        <div class="card-body">
+            <ul class="list-group list-group-flush">
+                <li>
+                    <button type="button" class="btn btn-media media-button" (click)="media()">
+                        <p>Calcular media</p>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-stddev stddev-button" (click)="stddev()">
+                        <p>Calcular stddev</p>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="resultado">
+    <input id="resultado1a" type="number" class="resultado1a" name="resultado1a" placeholder="Resultado" readonly value={{result}}>
+</div>

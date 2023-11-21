@@ -9,6 +9,7 @@ import { RegressionComponent } from './regression/regression.component';
 import { SimpsonComponent } from './simpson/simpson.component';
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
+import { UnoAComponent } from './uno-a/uno-a.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MenuComponent } from './menu/menu.component';
     RegressionComponent,
     SimpsonComponent,
     MenuComponent,
+    UnoAComponent,
   ],
   imports: [
     BrowserModule,
