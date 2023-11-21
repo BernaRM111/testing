@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
 import { UnoAComponent } from './uno-a/uno-a.component';
 import { TresAComponent } from './tres-a/tres-a.component';
+import { CincoAComponent } from './cinco-a/cinco-a.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { TresAComponent } from './tres-a/tres-a.component';
     MenuComponent,
     UnoAComponent,
     TresAComponent,
+    CincoAComponent,
   ],
   imports: [
     BrowserModule,
