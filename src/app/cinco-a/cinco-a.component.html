@@ -1,0 +1,42 @@
+<div class="titulo">
+    <h1>5a. Simpson - T</h1>
+</div>
+<!-- <h3>Ingresa los numeros separados por comas:</h3> -->
+<div class="labels">
+    <label id="fx-5a" class="fx-5a">Ingresa f(x):</label>
+    <label id="x0-5a" class="x0-5a">Ingresa X0:</label>
+    <label id="x1-5a" class="x1-5a">Ingresa X1:</label>
+    <label id="numseg-5a" class="numseg-5a">Ingresa n de segmentos:</label>
+    <label id="error-5a" class="error-5a">Ingresa ERORR:</label>
+    <label id="dof-5a" class="dof-5a">Ingresa dof:</label>
+</div>
+<div class="datos">
+    <input id="datofx-5a" [(ngModel)]="fx" type="text" class="datofx-5a" name="datofx-5a" placeholder="x">
+    <input id="datox0-5a" [(ngModel)]="x0" type="number" class="datox0-5a" name="datox0-5a" placeholder="0">
+    <input id="datox1-5a" [(ngModel)]="x1" type="number" class="datox1-5a" name="datox1-5a" placeholder="4">
+    <input id="datonumseg-5a" [(ngModel)]="numseg" type="number" class="datonumseg-5a" name="datonumseg-5a" placeholder="4">
+    <input id="datoerror-5a" [(ngModel)]="error" type="number" class="datoerror-5a" name="datoerror-5a" placeholder="0.0001">
+    <input id="datodof-5a" [(ngModel)]="dof" type="number" class="datodof-5a" name="datodof-5a" placeholder="9">
+
+</div>
+<div class="col">
+    <div class="card-row">
+        <div class="card-body">
+            <ul class="list-group list-group-flush">
+                <li>
+                    <button type="button" class="btn btn-simpson simpson-button" (click)="simpson()">
+                        <p>Calcular Simpson</p>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-t t-button" (click)="t()">
+                        <p>Calcular t</p>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="resultado">
+    <input id="resultado5a" type="number" class="resultado5a" name="resultado5a" placeholder="Resultado" readonly value={{resultado}}>
+</div>
