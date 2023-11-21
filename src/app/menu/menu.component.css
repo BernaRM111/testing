@@ -1,0 +1,57 @@
+.col {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.card-row{
+    width: 20rem; 
+    
+}
+
+.input-group {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 20px; 
+    font-weight: 80px;
+
+}
+
+.btn-1a {
+    background-color: #5ce1e6;
+    color:black;
+}
+
+.btn-3a {
+    background-color: #5ce1e6;
+    color:black;
+}
+
+.btn-5a {
+    background-color: #5ce1e6;
+    color:black;
+}
+
+.list-group {
+    list-style-type: none;
+    padding-left: 0;
+}
