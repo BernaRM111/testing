@@ -46,22 +46,23 @@ export class RegressionComponent implements OnInit {
 
   }
 
-  correlationCoefficient(x: number[], y: number[]): number {
+}
 
-    const n = x.length;
-    const sumaValoresX = suma(x);
-    const sumaValoresY = suma(y);
-    const sumaValoresXY = sumaXY(x, y);
-    const sumaValoresX2 = sumaX2(x);
-    const sumaValoresY2 = sumaY2(y);
+export function correlationCoefficient(x: number[], y: number[]): number {
 
-    const numerator = n * sumaValoresXY - sumaValoresX * sumaValoresY;
-    const denominator = Math.sqrt((n * sumaValoresX2 - sumaValoresX * sumaValoresX) * (n * sumaValoresY2 - sumaValoresY * sumaValoresY));
+  const n = x.length;
+  const sumaValoresX = suma(x);
+  const sumaValoresY = suma(y);
+  const sumaValoresXY = sumaXY(x, y);
+  const sumaValoresX2 = sumaX2(x);
+  const sumaValoresY2 = sumaY2(y);
 
-    const r = numerator / denominator;
-    return r;
-  }
-  r2(x: number[], y: number[]): number {
-    return this.correlationCoefficient(x, y) ** 2
-  }
+  const numerator = n * sumaValoresXY - sumaValoresX * sumaValoresY;
+  const denominator = Math.sqrt((n * sumaValoresX2 - sumaValoresX * sumaValoresX) * (n * sumaValoresY2 - sumaValoresY * sumaValoresY));
+
+  const r = numerator / denominator;
+  return r;
+}
+export function r2(x: number[], y: number[]): number {
+  return correlationCoefficient(x, y) ** 2
 }

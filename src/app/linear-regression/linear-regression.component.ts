@@ -48,7 +48,33 @@ export class LinearRegressionComponent implements OnInit {
     })
   }
 
-  b1(valoresx: number[], valoresy: number[]): number {
+  // b1(valoresx: number[], valoresy: number[]): number {
+
+  //   let sumXY = sumaXY(valoresx, valoresy);
+  //   let sumX2 = sumaX2(valoresx);
+  //   let mediaX = media(valoresx);
+  //   let mediaY = media(valoresy);
+  
+  //   return (sumXY - valoresx.length * mediaX * mediaY) / (sumX2 - valoresx.length * mediaX * mediaX);
+  // }
+  
+  // b0(x: number[], y: number[]): number {
+  //   let xMean = media(x);
+  //   let yMean = media(y)
+  //   let b = this.b1(x, y)
+  //   return yMean - b * xMean;
+  // }
+
+  // regresion(data: number, x: number[], y: number[]): number {
+  //   let b0 = this.b0(x, y);
+  //   let b1 = this.b1(x, y)
+  //   let yk = (b0 + b1 * data)
+  //   return yk
+  // }
+  
+}
+
+export function b1(valoresx: number[], valoresy: number[]): number {
 
     let sumXY = sumaXY(valoresx, valoresy);
     let sumX2 = sumaX2(valoresx);
@@ -58,17 +84,16 @@ export class LinearRegressionComponent implements OnInit {
     return (sumXY - valoresx.length * mediaX * mediaY) / (sumX2 - valoresx.length * mediaX * mediaX);
   }
   
-  b0(x: number[], y: number[]): number {
+  export function b0(x: number[], y: number[]): number {
     let xMean = media(x);
     let yMean = media(y)
-    let b = this.b1(x, y)
+    let b = b1(x, y)
     return yMean - b * xMean;
   }
 
-  regresion(data: number, x: number[], y: number[]): number {
-    let b0 = this.b0(x, y);
-    let b1 = this.b1(x, y)
-    let yk = (b0 + b1 * data)
+  export function regresion(data: number, x: number[], y: number[]): number {
+    let bg0 = b0(x, y);
+    let bg1 = b1(x, y)
+    let yk = (bg0 + bg1 * data)
     return yk
   }
-}
