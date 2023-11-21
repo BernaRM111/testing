@@ -14,31 +14,21 @@ export class StddevComponent implements OnInit {
 
   constructor(private mediaService: MediaService) {}
 
-  ngOnInit() {
-    this.calculateProxySizeStandardDeviation();
-    this.calculateDevHoursStandardDeviation();
-  }
-
-  calculateProxySizeStandardDeviation() {
-    this.mediaService.getProxySize().subscribe(data => { 
-      const mean = media(data);
-      this.proxySizeStdDev = this.desviacionEstandar(data, mean);
+  ngOnInit() {   
+    this.mediaService.getDevHours().subscribe(data => {
+      this.devHoursStdDev = desviacionEstandar(data);
     });
+
+    this.mediaService.getProxySize().subscribe(data => {
+      this.proxySizeStdDev = desviacionEstandar(data);
+    }); 
   }
 
-  calculateDevHoursStandardDeviation() {
-    this.mediaService.getDevHours().subscribe(data => { 
-      const mean = media(data);
-      this.devHoursStdDev = this.desviacionEstandar(data, mean);
-    });
-  }
-
-  desviacionEstandar(data: number[], mean: number): number {
-    const squaredDifferences = data.map(val => Math.pow(val - mean, 2));
-    const meanOfSquaredDifferences = media(squaredDifferences);
-    const stdDev = Math.sqrt(meanOfSquaredDifferences);
-    return stdDev;
-  }
-
+}
+export function desviacionEstandar(data: number[]): number {
+  const mean = media(data)
+  const squaredDifferences = data.map((val) => Math.pow(val - mean, 2));
+  const variance = squaredDifferences.reduce((acc, val) => acc + val, 0) / data.length;
+  return Math.sqrt(variance);
 }
 
